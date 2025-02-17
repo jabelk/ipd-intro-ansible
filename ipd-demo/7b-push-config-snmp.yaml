@@ -1,0 +1,16 @@
+---
+  - name: "PLAY 1 - PUSH CONFIG FOR IOS"
+    hosts: "iosxe"
+    connection: "network_cli"
+    gather_facts: no
+    tasks:
+
+      - name: "TASK 1 - PUSH SNMP IOS CONFIG"
+        cisco.ios.ios_config:
+          src: "config/snmp/{{ inventory_hostname }}_snmp_iosxe_config.txt"
+          backup: "yes"
+          save_when: "modified"
+
+      - name: "TASK 2 - SEND A SINGLE ENABLE LEVEL SHOW COMMAND"
+        cisco.ios.ios_command:
+          commands: "show run | include snmp"

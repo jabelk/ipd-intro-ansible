@@ -1,0 +1,7 @@
+loopback_ip: "172.30.2.1 255.255.255.0"
+
+snmp:
+  ro: "cat8k_read_only"
+  rw: "cat8k_read_write"
+  contact: "cat8k_lab_admin"
+  location: "cat8k_rno"
