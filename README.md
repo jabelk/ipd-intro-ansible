@@ -1,20 +1,17 @@
-# Introduction to Ansible for Network Engineers: Part 1
+# Introduction to Ansible for Network Engineers
 
 
-Summary: Learn the basic building blocks of Ansible, along with practical demos showcasing network automation use cases.
-<https://mkto.cisco.com/devnet-webinar-series.html>
+Devices are from the IOS XE on Cat8kv reservable sandbox on [Cisco DevNet](https://devnetsandbox.cisco.com/DevNet), though you can change the inventory credentials and IP address for your own lab. 
 
-Focus on core features:
- - inventory
- - playbook structure
- - making config changes and gathering operational data
- - saving output to files
- - pushing config from files
- - basic variable manipulation
- - using Ansible facts
+## Abstract
 
-# Introduction to Ansible for Network Engineers: Part 2
+This session is for both Instructors and Students that are part of Cisco Networking Academy.
 
-Summary: Dig deeper with practical tips and tricks while building Ansible playbooks.
+Even though Ansible is not new on the CCNA Exam, automation can be intimidating. For Ansible, oftentimes examples focus on using it within a cloud or compute environment, which then requires effort to translate into a networking context. Taking Cisco networking examples, we will break down and explain through live demos:
 
-Focus on variable system, Jinja2 Templates, abstractions with Roles
+- YAML and Playbook structure
+- Building an inventory
+- Using Ansible modules such as gathering “Show” commands or configuring devices
+- Storing output into files
+
+Ansible has a lot of moving parts, and this session will demystify it for you so you can more effectively teach your students the concepts and enable their productivity in this much needed skill within the modern network engineering skillset.
