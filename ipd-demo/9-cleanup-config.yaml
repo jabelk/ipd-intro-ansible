@@ -12,10 +12,12 @@
               - "no cdp run"
               - "no lldp run"
 
-      - name: "TASK 2 - REMOVE TEST ACL"
-        cisco.ios.ios_config:
-          lines:
-              - "no ip access-list extended vpn-customer-1-amer-location"
+      - name: "TASK 5 - REMOVE SHOW_OUTPUTS DIR IF EXISTS"
+        ansible.builtin.file:
+          path: "config"
+          state: "absent"
+        run_once: true
+
 
       - name: "TASK 3 - REMOVE INTERFACES"
         cisco.ios.ios_config:
@@ -25,13 +27,13 @@
               - "no interface Loopback125"
               - "no interface Loopback1450"
 
-      - name: "TASK 4 - CREATE SHOW_OUTPUTS DIR IF DOES NOT EXIST"
+      - name: "TASK 4 - REMOVE SHOW_OUTPUTS DIR IF EXISTS"
         ansible.builtin.file:
           path: "show_outputs"
           state: "absent"
         run_once: true
 
-      - name: "TASK 5 - CREATE SHOW_OUTPUTS DIR IF DOES NOT EXIST"
+      - name: "TASK 5 - REMOVE SHOW_OUTPUTS DIR IF EXISTS"
         ansible.builtin.file:
           path: "backup"
           state: "absent"
